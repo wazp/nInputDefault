@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./nInputDefault-0.5.js"></script>
+
+	<script type="text/javascript">		
+		$(document).ready(function(){
+			$('input').nInputDefault();
+			$('input:eq(1)').nInputDefault({
+				focusClass : 'focus2'
+			});
+			$('textarea').nInputDefault();
+		});
+	</script>
+	
+	<style type="text/css">
+		input{color:#ccc;font-style:italic;}
+		.test2{color:purple;}
+		.focus{color:red!important;}
+		.focus2{color:#000!important;}
+		pre{font-size:11px;}
+	</style>
+	
+<title>Test</title>
+</head>
+<body>
+	<input type="text" placeholder="Search..." name="test" />
+	<input type="text" placeholder="Another test…"  value="Incoming value from post" class="test2" name="test2" />
+	<input type="text" placeholder="Placeholder text" name="test3" />
+	<textarea placeholder="Textarea, yo!"></textarea>
+	<br style="clear:both" />
+<pre>
+&lt;script type="text/javascript"&gt;
+	$(function(){
+		$('input').nInputDefault();
+		$('input:eq(1)').nInputDefault({
+			focusClass : 'focus2'
+		});
+	});
+&lt;/script&gt;
+</pre>
+<a href="./nInputDefault-0.5.js">nInputDefault-0.5.js</a> - <a href="./nInputDefault-0.5.min.js">nInputDefault-0.5.min.js</a>
+</body>
+</html>
