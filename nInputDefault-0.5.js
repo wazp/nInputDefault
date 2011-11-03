@@ -26,7 +26,7 @@
 				// if no native support, add placeholder as value if not set already from POST
 				if(!canHandlePlaceholder && !obj.val().length) obj.val(strDefault);
 				// bind event for focus
-				obj.unbind('focus').bind('focus', function(){
+				obj.unbind('focus.nInputDefault').bind('focus.nInputDefault', function(){
 					if(!canHandlePlaceholder){ // if no native support
 						// check if not using default text or being empty already
 						if ((obj.val() == strDefault || obj.val() == '')) { 
@@ -37,7 +37,7 @@
 					// add the focus class we want, either default or user set.
 					obj.addClass(options.focusClass);
 
-				}).bind('blur', function(){ // bind blur event
+				}).unbind('blur.nInputDefault').bind('blur.nInputDefault', function(){ // bind blur event
 					if(!canHandlePlaceholder){ // if no native support
 						// if not placeholder text or empty
 						if (obj.val() == strDefault || obj.val() == '') {
